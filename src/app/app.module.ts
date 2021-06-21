@@ -1,16 +1,26 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { QuizComponent } from './quiz/quiz.component';
+import{HttpClientModule} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuizComponent,
+ 
   ],
+ 
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
+  
 })
 export class AppModule { }
